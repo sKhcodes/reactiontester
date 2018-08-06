@@ -16,8 +16,9 @@ function hiShape() {
 }
 
 function appearAfterDelay() {
-setTimeout(hiShape, Math.random * 2000);
+setTimeout(hiShape, Math.random() * 2000);
 }
+
 appearAfterDelay();
 document.getElementById("shape").onclick = function() {
     document.getElementById("shape").style.display="none";
