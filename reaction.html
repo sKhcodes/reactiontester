@@ -4,20 +4,41 @@
 <body>
     <h1>Test your Reactions</h1>
     <p> How quickly can you click the shapes?</p>
-    <div class= "shape" id= "shape"></div>
     <p> Your time: <span id = "YourTime"></span></p>
+    <div class= "shape" id= "shape"></div>
+    
 <script>
 
 var start= new Date().getTime();
-//making shape appear
+
 function hiShape() {
     document.getElementById("shape").style.display = "block";
     start= new Date().getTime();
+    var rando = Math.random() * 300;
+    var width=  Math.random() * 500;
+    var radius = Math.random() * 100;
+    var randcolor = getRandomColor();
+    document.getElementById("shape").style.top = rando + "px";
+    document.getElementById("shape").style.left = rando + "px"; 
+    document.getElementById("shape").style.width = width + "px"; 
+    document.getElementById("shape").style.height = width + "px"; 
+    document.getElementById("shape").style.background = randcolor;
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 function appearAfterDelay() {
 setTimeout(hiShape, Math.random() * 2000);
+
 }
+
 
 appearAfterDelay();
 document.getElementById("shape").onclick = function() {
@@ -37,6 +58,7 @@ width: 50px;
 height: 50px;
 background: red;
 display: none;
+position: relative;
  }
 </style>
 </body>
