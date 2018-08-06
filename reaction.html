@@ -9,18 +9,22 @@
 <script>
 
 var start= new Date().getTime();
+//making shape appear
 function hiShape() {
     document.getElementById("shape").style.display = "block";
     start= new Date().getTime();
-
 }
-setTimeout(hiShape, 1000);
 
-    document.getElementById("shape").onclick = function() {
+function appearAfterDelay() {
+setTimeout(hiShape, Math.random * 2000);
+}
+appearAfterDelay();
+document.getElementById("shape").onclick = function() {
     document.getElementById("shape").style.display="none";
-        var end = new Date().getTime();
+    var end = new Date().getTime();
     var timeTaken = (end - start) /1000;
    document.getElementById("YourTime").innerHTML = (timeTaken + " seconds");
+   appearAfterDelay();
 }
 
 </script>
@@ -31,7 +35,7 @@ setTimeout(hiShape, 1000);
 width: 50px;
 height: 50px;
 background: red;
-display:"none";
+display: none;
  }
 </style>
 </body>
