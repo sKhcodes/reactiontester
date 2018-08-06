@@ -9,6 +9,12 @@
 <script>
 
 var start= new Date().getTime();
+function hiShape() {
+    document.getElementById("shape").style.display = "block";
+    start= new Date().getTime();
+
+}
+setTimeout(hiShape, 1000);
 
     document.getElementById("shape").onclick = function() {
     document.getElementById("shape").style.display="none";
@@ -25,6 +31,7 @@ var start= new Date().getTime();
 width: 50px;
 height: 50px;
 background: red;
+display:"none";
  }
 </style>
 </body>
