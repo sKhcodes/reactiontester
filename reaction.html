@@ -18,12 +18,21 @@ function hiShape() {
     var width=  Math.random() * 500;
     var radius = Math.random() * 100;
     var randcolor = getRandomColor();
+   
+    if (Math.random() < 0.5) {
+        document.getElementById("shape").style.borderRadius = "50%";
+    }
+
+else {
+    document.getElementById("shape").style.borderRadius = 0;
+}
     document.getElementById("shape").style.top = rando + "px";
     document.getElementById("shape").style.left = rando + "px"; 
     document.getElementById("shape").style.width = width + "px"; 
     document.getElementById("shape").style.height = width + "px"; 
     document.getElementById("shape").style.background = randcolor;
 }
+
 
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
@@ -60,5 +69,6 @@ background: red;
 display: none;
 position: relative;
  }
+
 </style>
 </body>

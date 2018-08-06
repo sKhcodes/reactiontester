@@ -48,3 +48,13 @@ background: red;
 }
 </style>
 </body>
+//put back in
+else {
+    document.getElementById("shape").style.borderRadius = 0;
+}
+    document.getElementById("shape").style.top = rando + "px";
+    document.getElementById("shape").style.left = rando + "px"; 
+    document.getElementById("shape").style.width = width + "px"; 
+    document.getElementById("shape").style.height = width + "px"; 
+    document.getElementById("shape").style.background = randcolor;
+}
