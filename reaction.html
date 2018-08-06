@@ -1,0 +1,30 @@
+<head>
+    <title>Test your Reactions</title>
+</head>
+<body>
+    <h1>Test your Reactions</h1>
+    <p> How quickly can you click the shapes?</p>
+    <div class= "shape" id= "shape"></div>
+    <p> Your time: <span id = "YourTime"></span></p>
+<script>
+
+var start= new Date().getTime();
+
+    document.getElementById("shape").onclick = function() {
+    document.getElementById("shape").style.display="none";
+        var end = new Date().getTime();
+    var timeTaken = (end - start) /1000;
+   document.getElementById("YourTime").innerHTML = (timeTaken + " seconds");
+}
+
+</script>
+
+<style>
+
+ #shape {
+width: 50px;
+height: 50px;
+background: red;
+ }
+</style>
+</body>
